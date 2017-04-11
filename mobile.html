@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create mobile phone</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Create mobile phone</h1>
+		<button type="button" onclick="show()">Show mobile phone specs</button>
+		<script>
+		function show() {
+			var mobile = {
+				make: "Goclever",
+				API_version: 17,
+				smartphone: true,
+				features: ['GPS', 'Dual SIM', 'stock: Jelly bean'],
+				specs: {price_PLN: 200,
+						origin: 'Poland',
+						model: 'Quantum 350'
+						}
+
+			};
+			console.log('## Mobile ##');
+			console.log('Make: ', mobile.make);
+			console.log('API version: ', mobile.API_version);
+			console.log('Is smartphone:', mobile.smartphone);
+			console.log('Features: ', mobile.features);
+			console.log('Specs: ', mobile.specs);
+		}
+		</script>
+	</body>
+</html>

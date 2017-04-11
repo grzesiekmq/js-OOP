@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Houses for sale</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Houses for sale</h1>
+		<script>
+			function House(bedrooms, facilities, price, address, phone) {
+				this.bedrooms = bedrooms;
+				this.facilities = ['garden','garage','swimming pool'];
+				this.price = price;
+				this.address = {street: '',
+								city: ''};
+				this.phone = phone;
+
+				this.changePrice = function(newPrice){
+					this.price = newPrice;
+				};
+				this.addFacility = function(newFacility){
+					this.facilities.push(newFacility);
+				};
+				this.description = function(){
+					return console.log('Bedrooms: ' + bedrooms + '\n' + ' ' + 'Facilities: ' + facilities + '\n' + ' ' + 'Price: ' + price + '\n' + ' ' + 'Address: ' + address);
+				};
+
+
+			}
+			
+			house1 = new House(1, 'garden', 100000, 'Goldfields Hwy, Wiluna', '123 456 789');
+			house1.description();
+			house2 = new House(2, 'garden,garage', 200000, '101 53, Kena', '121 456 789');
+			house2.description();
+			house3 = new House(3, 'garden,garage,swimming pool', 300000, 'Rruga Daxhit, Tiranë', '122 456 789');
+			house3.description();
+			house4 = new House(4, 'garden,garden,garage,swimming pool', 400000, 'Dvoranci 22, Dvoranci', '123 556 789');
+			house4.description();
+			house5 = new House(5, 'garden,garage,swimming pool,swimming pool', 500000, 'Epar.Od. Mourikiou-Drosias 31, Chalkida', '123 455 789');
+			house5.description();
+			console.log(house4.price = 500000);
+			console.log(house5.price = 600000);
+			house1.addFacility('dining room');
+			house4.addFacility('gym');
+			house5.addFacility('golf course');
+			// updated with facilities
+			console.log(house1.facilities);
+			console.log(house4.facilities);
+			console.log(house5.facilities);
+
+
+		</script>
+	</body>
+</html>
